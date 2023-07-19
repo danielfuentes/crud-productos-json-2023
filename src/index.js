@@ -31,13 +31,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
 //Requerir las rutas
-//const webRoutes = require('./routes/web');
-//const productoRoutes = require('./routes/producto');
-//const adminRoutes = require('./routes/admin');
+const webRoutes = require('./routes/web');
+const productoRoutes = require('./routes/producto');
+const adminRoutes = require('./routes/admin');
 
 //Para usar las rutas
-//app.use(webRoutes);
-//app.use(productoRoutes);
-//app.use(adminRoutes);
+app.use(webRoutes);
+app.use(productoRoutes);
+app.use(adminRoutes);
 //Levantar servidor
 app.listen(3001, 'localhost', ()=> console.log('Servidor corriendo en el puerto 3001'));
